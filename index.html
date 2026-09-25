@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#02030a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title id="pageTitle">DLove · Món quà nhỏ</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" aria-label="Trang quà tặng">
+    <video id="scene" playsinline muted preload="auto"></video>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div id="topControls" class="controls">
+      <button id="gift" class="icon-btn" type="button" aria-label="Mở thư" title="Mở thư">
+        <img src="assets/gift.png" alt="">
+      </button>
+      <button id="sound" class="icon-btn" type="button" aria-label="Bật âm thanh" title="Âm thanh">
+        <img id="soundImg" src="assets/sound.png" alt="">
+      </button>
+    </div>
+
+    <div id="holdHint" class="hold-hint" aria-hidden="true">Ấn giữ vào mặt trăng</div>
+    <button id="holdZone" type="button" aria-label="Ấn giữ vào mặt trăng để tiếp tục"></button>
+    <button id="letterHit" type="button" aria-label="Mở thư"></button>
+    <button id="close" class="close-btn" type="button" aria-label="Đóng thư">×</button>
+
+    <div id="loading" class="loading" aria-live="polite">
+      <div class="spinner"></div>
+      <span>Đang chuẩn bị món quà…</span>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <audio id="music" loop preload="auto" src="assets/music.mp3"></audio>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
