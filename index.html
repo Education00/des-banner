@@ -1,45 +1,46 @@
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-  <meta name="theme-color" content="#02030a">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <title id="pageTitle">DLove · Món quà nhỏ</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>tuất quynhhh</title>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css.css">
 </head>
 <body>
-  <main id="app" aria-label="Trang quà tặng">
-    <video id="scene" playsinline muted preload="auto"></video>
-    <div class="vignette" aria-hidden="true"></div>
-    <div class="grain" aria-hidden="true"></div>
 
-    <div id="topControls" class="controls">
-      <button id="gift" class="icon-btn" type="button" aria-label="Mở thư" title="Mở thư">
-        <img src="assets/gift.png" alt="">
-      </button>
-      <button id="sound" class="icon-btn" type="button" aria-label="Bật âm thanh" title="Âm thanh">
-        <img id="soundImg" src="assets/sound.png" alt="">
-      </button>
+    <div id="webgl-container"></div>
+
+    <div class="top-bar">
+        <button class="icon-btn" id="audio-btn" title="Bật/Tắt Nhạc"><i class="fas fa-music"></i></button>
+        <button class="icon-btn" id="reset-cam-btn" title="Góc nhìn ban đầu"><i class="fas fa-compress-arrows-alt"></i></button>
     </div>
 
-    <div id="holdHint" class="hold-hint" aria-hidden="true">Ấn giữ vào mặt trăng</div>
-    <button id="holdZone" type="button" aria-label="Ấn giữ vào mặt trăng để tiếp tục"></button>
-    <button id="letterHit" type="button" aria-label="Mở thư"></button>
-    <button id="close" class="close-btn" type="button" aria-label="Đóng thư">×</button>
+    <div class="click-hint">Chạm vào lồng đèn đii</div>
 
-    <div id="loading" class="loading" aria-live="polite">
-      <div class="spinner"></div>
-      <span>Đang chuẩn bị món quà…</span>
+    <div class="wish-modal" id="wishModal">
+        <div class="wish-card">
+            <button class="close-btn" id="closeWishBtn" aria-label="Đóng"><i class="fas fa-times"></i></button>
+            <h3 id="wishTitle">gửi nhuquynh tuat</h3>
+            
+            <div class="wish-image-container">
+                <img id="wishImage" src="" alt="Hình ảnh Trung Thu">
+            </div>
+
+            <p id="wishText">"Chúc cậu một đêm Trung Thu ấm áp, bình an và trọn vẹn bên những người thương yêu."</p>
+            <div class="tag">✦ Trung Thu An Lành ✦</div>
+        </div>
     </div>
 
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  </main>
-
-  <audio id="music" loop preload="auto" src="assets/music.mp3"></audio>
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+    <audio id="bgm" loop src="./assets/1.mp3"></audio>
+    
+    
+    <!-- Three.js & OrbitControls -->
+    <script src="./assets/three.min.js"></script>
+    <script src="./assets/OrbitControls.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
